@@ -1,5 +1,5 @@
 # Minimal Alpine Docker image with bash
-FROM alpine:3.13.5
+FROM codercom/code-server:latest
 MAINTAINER Niema Moshiri <niemamoshiri@gmail.com>
-RUN apk update && \
-    apk add bash g++ gcc gdb make musl-dev python3 valgrind
+RUN sudo apt-get update && sudo apt-get upgrade -y \
+    sudo apt-get install -y g++ gcc gdb make python3 valgrind
